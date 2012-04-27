@@ -1,1 +1,6 @@
-Money.default_currency = Money::Currency.new("USD")
+MoneyRails.configure do |config|
+
+  # To set the default currency
+  #
+  config.default_currency :usd
+end
