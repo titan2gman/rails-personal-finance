@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-if defined? Mongoid
+if defined?(Mongoid) && ::Mongoid::VERSION =~ /^2(.*)/
 
   describe Money do
     let(:priceable) { Priceable.create(:price => Money.new(100, 'EUR')) }
