@@ -5,12 +5,7 @@ module MoneyRails
         def monetize(accessor, options={})
           [:amount, :currency].each do |attribute|
             column_present, _, *opts = OptionsExtractor.extract attribute, :no_table, accessor, options
-            if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3')
-              constraints = opts.pop
-              column(*opts, **constraints) if column_present
-            else
-              column(*opts) if column_present
-            end
+            column(*opts) if column_present
           end
         end
 
