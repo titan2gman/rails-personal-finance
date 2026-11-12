@@ -1,3 +1,4 @@
+
 module MoneyRails
   module ActionViewExtension
     def currency_symbol(currency = Money.default_currency)
