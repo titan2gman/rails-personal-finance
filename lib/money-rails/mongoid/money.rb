@@ -8,6 +8,8 @@ class Money
     }
   end
 
+  
+
   class << self
 
     # Get the object as it was stored in the database, and instantiate
