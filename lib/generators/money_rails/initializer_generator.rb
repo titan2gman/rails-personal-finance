@@ -9,7 +9,6 @@ module MoneyRails
       def copy_initializer
         copy_file 'money.rb', 'config/initializers/money.rb'
       end
-
     end
   end
 end
